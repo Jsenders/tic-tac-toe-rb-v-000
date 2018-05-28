@@ -99,11 +99,3 @@ def play(board)
   end
 end
 
-def winner(board)
-  if won?(board)
-    board[X]
-    puts "Congratulations X!"
-  else
-    puts "Congratulations O!"
-  end
-end
