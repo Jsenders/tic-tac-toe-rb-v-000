@@ -40,7 +40,7 @@ def turn(board)
     display_board(board)
   end
 end
-  
+
 def turn_count(board)
 end
 
