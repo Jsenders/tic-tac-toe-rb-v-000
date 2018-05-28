@@ -36,6 +36,12 @@ def turn(board)
   end
 end
 
+def turn_count(board)
+end
+
+def current_player
+end
+
 def won?(board)
 WIN_COMBINATIONS.each do |array|
     if array.all? { |value| board[value] =="X" } || array.all? { |value| board[value] =="O" }
