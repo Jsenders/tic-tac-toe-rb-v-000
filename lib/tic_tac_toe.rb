@@ -45,3 +45,22 @@ WIN_COMBINATIONS.each do |array|
   return false
 end
 
+def full?(board)
+  !board.any? { |x| x == " " }
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  won?(board) || draw?(board) 
+end
+
+  def winner(board)
+  if winning_combo = won?(board)
+    board[winning_combo.first]
+  else
+  end
+end
+
