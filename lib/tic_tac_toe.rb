@@ -84,6 +84,8 @@ end
 end
 
 def play(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
   until over?(board) == true || won?(board) != false
   puts 'turn'
     turn(board)
