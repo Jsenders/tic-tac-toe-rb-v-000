@@ -1,4 +1,4 @@
-
+WIN_COMBINATIONS = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],[2,4,6],[0,3,6],[1,4,7],[2,5,8]]
 
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -36,12 +36,12 @@ def turn(board)
   end
 end
 
-# Define your play method below
-def play(board)
-  counter = 0
-  while counter <9
-    puts turn(board)
-    counter += 1
+def won?(board)
+WIN_COMBINATIONS.each do |array|
+    if array.all? { |value| board[value] =="X" } || array.all? { |value| board[value] =="O" }
+      return array
+    end
   end
+  return false
 end
 
