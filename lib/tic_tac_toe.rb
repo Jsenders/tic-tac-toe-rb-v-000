@@ -71,9 +71,15 @@ end
 end
 
 def play(board)
-  counter = 0
-  while counter <9
-    puts turn(board)
-    counter += 1
+  until over?(board) == true || won?(board) != false
+  puts 'turn'
+    turn(board)
+  end
+  if winner(board)
+    puts "Congratulations!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  else
+    return nil
   end
 end
